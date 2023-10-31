@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html,body{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.25rem;
+    font-family: 'Roboto','sans-sarif';
+    color: var(--secondary-text-color);
+    line-height: 1.8rem ;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+
+}
+ul{
+    list-style: none;
+}
+/*....Utilty-Class..... */
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.contianer {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+position: relative;
+}
+.flex{
+    display: flex;
+}
+/* weather-main */
+.weather-mian{
+    justify-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    
+}
+.weather-card{
+    align-items: center;
+   gap: 20px;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+}
+.card-1{
+overflow: hidden;
+    flex-direction: column;
+    height: 400px;
+    border: 2px solid black;
+    width: 30%;
+    border-radius: 29px;
+    
+    position: relative;
+}
+.card-1 ul{
+    padding: 0px 0px;
+    margin-top:0;
+    flex-direction: column;
+}
+.card-1 ul li{
+    padding-left: 10px;
+    
+}
+.card-hdr{
+    width: 100%;
+height: 50%;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.loction img{
+    width: 25px;
+}
+.card-1::before{
+    border-radius: 30px;
+    background-size: 100%;
+    content: "";
+    position: absolute;
+    background: url(icions/white-cloud-blue-sky.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+z-index: -1;
+opacity: .8;
+}
+.card-1 input[type="date"] {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .days{
+    margin-bottom: 10px;
+    margin-left: 25px;
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 5px;
+    
+  }
+  .temp-main{
+    flex-direction:row;
+    
+  }
+  .temperature {
+    margin-right: 5px;
+    font-size: 59px;
+}
+
+/* Style for the unit (°C) */
+.unit {
+    font-size: 59px;
+    font-weight: normal;
+}
+
+.card-2{
+    overflow: hidden;
+    height: 400px;
+    background: linear-gradient(to top,gray,black,white);
+
+    border-radius: 20px;
+
+    border: 2px solid black;
+    width: 30%;
+}
+
+
+/* ------tab-content-of-card-2------- */
+.active {
+    transition: background-color 0.9s ease-in-out;
+    color: #00aad5 !important;
+    padding: 5px 5px;
+}
+/* tab */
+.tab{
+    margin-left: 10px;
+      gap: 40px;  
+      align-items: center;
+      flex-direction: row;
+      display: flex;
+      width: 100%;
+  }
+  .card-2-msg1{
+    /* margin: 10px; */
+    border-bottom: 2px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .tab button{
+    padding: 10px 6px !important;
+      outline-style: none;
+      border: none;
+      color: #410303;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+  }
+  .tab button h4{
+    font-size: small;
+  }
+  .tab button img{
+    width: 50%;
+  }
+  .tab-content{
+      width: 100%;
+      display: none;
+      height: 130px;
+  }
+  
+
+  /* ---------Search-bar------- */
+  .search-container {
+    width: 100%;
+    text-align: center;
+
+}
+.search-container input{
+    border-radius: 20px !important;
+
+}
+#search-input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.54);
+    border: 1px solid #110f0f;
+    width: 300px;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    font-size: 25px;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #0273ac;
+}
+
+  /* Styles for screens smaller than 576px (e.g., smartphones) */
+@media (max-width: 575.98px) {
+    .weather-card{
+        flex-direction: column;
+    }
+    .card-2,
+    .card-1{
+        width: 100%;
+        border-radius: 15px;
+    }
+    .card-2,
+    .card-1{
+        height: 100%;
+    }
+    .days img{
+        width: 7%;
+    }
+    .days h2{
+        font-size: 1.2rem;
+    }
+    .unit,
+    .temperature{
+        font-size: 2.3rem !important;
+    }
+    .tab{
+        gap: 14px;
+    }
+    #search-input {
+        max-width: 300px;
+    }
+
+    .suggestions {
+        max-width: 300px;
+    }
+  }
+  
+  /* Styles for screens between 576px and 767.98px (e.g., small tablets) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .weather-card{
+        flex-direction: column;
+    }
+    .card-2,
+    .card-1{
+        width: 100%;
+        border-radius: 15px;
+    }
+    .card-2,
+    .card-1{
+        height: 100%;
+    }
+    .days img{
+        width: 7%;
+    }
+    .days h2{
+        font-size: 1.2rem;
+    }
+    .unit,
+    .temperature{
+        font-size: 2.3rem !important;
+    }
+    #search-input {
+        max-width: 300px;
+    }
+
+    .suggestions {
+        max-width: 300px;
+    }
+  }

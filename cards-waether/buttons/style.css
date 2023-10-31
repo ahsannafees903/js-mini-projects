@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html,body{
+    box-sizing: border-box;
+    background-color: gray;
+}
+.active {
+    transition: background-color 0.9s ease-in-out;
+    color: #00aad5 !important;
+    padding: 5px 5px;
+  }
+  /* tab */
+  .tab{
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      display: flex;
+      width: 100%;
+  }
+  .card-2-msg1{
+    margin: 10px;
+    width: 100%;
+    /* background-color: #410303; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab button{
+      padding: 10px 6px !important;
+      outline-style: none;
+      border: none;
+      color: #410303;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+  }
+  .tab button h4{
+    font-size: small;
+  }
+  .tab button img{
+    width: 50%;
+  }
+  .tab-content{
+  background: rebeccapurple;
+      width: 100%;
+      padding: 12px;
+      display: none;
+      height: 200px;
+  }
+  
